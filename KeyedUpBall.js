@@ -102,9 +102,10 @@ KeyedUpBall.prototype = {
 
   // checkForIntersection() should returns true if this ball intersects with another ball
   // for this to work, the other ball must have its position represented by a position object that has an x and y, as well as a radius, as our BouncyBall does
-  detectCollision: function(otherBall) {
-
-    // your code goes here
+detectCollision: function(otherBall) {
+  var distanceBetweenBalls = dist(this.position.x, this.position.y, otherBall.position.x, otherBall.position.y);
+  var collisionDistance = this.radius + otherBall.radius;
+  return (distanceBetweenBalls < collisionDistance);
 
   }
 
