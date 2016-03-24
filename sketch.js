@@ -20,7 +20,7 @@ draw = function() {
   That said, you may wish to define a mouseClicked() function, which will be called automatically by p5 whenever the mouse is clicked.
 */
 mouseClicked = function () {
-
+  if(!myGame.gameInPlay)myGame.startGame();
   // optional code goes here
 
 };
